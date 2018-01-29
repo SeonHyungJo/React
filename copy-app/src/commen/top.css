@@ -1,0 +1,24 @@
+/* 상단 메뉴 */
+.navbar * {
+	text-shadow: none !important;
+	color: #000;
+	font-size: 20px;
+}
+
+.navbar .container {
+	width: 100%;
+}
+
+.navbar {
+	background: #fff;
+	border-bottom: 2px dashed #aaaaaa;
+	margin: 0px 10px;
+}
+
+.navbar .nav > li > a {
+	font-size: 18px;
+}
+
+.navbar .nav > li > a:hover{
+	color: #000;
+}

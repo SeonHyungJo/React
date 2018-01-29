@@ -448,47 +448,6 @@ form {
 	border: none !important;
 }
 
-/* 상단 메뉴 */
-.navbar * {
-	text-shadow: none !important;
-	color: #000;
-}
-
-.navbar .container {
-	width: 100%;
-}
-
-.navbar {
-	background: #fff;
-	border-bottom: 1px dashed #aaaaaa;
-}
-
-/* .navbar .nav > li {
-	border-left: 2px solid #000;	
-} */
-.navbar .nav>li>a {
-	font-size: 15px !important;
-}
-
-.navbar i {
-	margin-right: 3px;
-}
-
-.navbar .caret {
-	border-top-color: #fff !important;
-	border-bottom-color: #fff !important;
-}
-
-.navbar .nav-user-pic {
-	width: 20px;
-	margin-right: 10px;
-	display: inline-block;
-}
-
-.navbar .badge {
-	margin-left: 5px;
-}
-
 /* 좌측 메뉴 */
 .sidebar {
 	width: 130px;
