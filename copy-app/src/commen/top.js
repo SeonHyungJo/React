@@ -24,7 +24,9 @@ class Top extends Component {
 
   	render() {
 		const topMenu = this.props
-		console.log(topMenu);
+		const listItems = topMenu.map((number) =>
+			<li>{number}</li>
+		);
 		return (
 		<div className="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
 			<div className="container">
@@ -44,19 +46,7 @@ class Top extends Component {
 				role="navigation"
 			>
 				<ul className="nav navbar-nav navbar-right">
-				{topMenu.map((menu) => this.state.topMenuClicked === menu ? (this._makeTopList) : null )}
-				// <li className="active">
-				// 	<a href="#" onClick={this._click("m")}>{topMenu[0]}</a>
-				// </li>
-				// <li>
-				// 	<a href="#" onClick={this._click}>{topMenu[1]}</a>
-				// </li>
-				// <li>
-				// 	<a href="#" onClick={this._click}>{topMenu[2]}</a>
-				// </li>
-				// <li>
-				// 	<a href="#" onClick={this._click}>{topMenu[3]}</a>
-				// </li>
+					{topMenu.map((menu) => this.state.topMenuClicked === menu ? (<TopList />) : null )}
 				</ul>
 			</nav>
 			</div>

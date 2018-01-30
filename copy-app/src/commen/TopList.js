@@ -6,7 +6,7 @@ class TopList extends Component {
   render() {
     return (
         <li className={this.props.active}>
-            <a href="#" onClick={this.props.click}>{this.props.topMenuName}</a>
+            <a onClick={this.props.click}>{this.props.topMenuName}</a>
         </li>
     );
   }

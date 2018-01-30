@@ -20,6 +20,7 @@ export default class App extends React.Component {
     this._loadToDos()
   }
 
+
   render() {
     const{ newToDo, loadedToDos, toDos } = this.state
     if(!loadedToDos){
