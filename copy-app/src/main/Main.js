@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import './main.css';
 
-class Main extends Component {
+export default class Main extends Component {
   render() {
-    const { title, menuList } = this.props;
+    // const { title, menuList, isPlaying } = this.props;
     console.log("main")
-    console.log(menuList)
-    return (
+    console.log(this.props) 
+    return ( 
         <div>
-            {title}
-            {menuList[0].f_code}
-        </div>
+        </div> 
     )};
-}
-
-export default Main;
+} 

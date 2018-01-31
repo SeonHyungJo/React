@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import Main from './main/Main';
+import Main from './main';
+import Nav from './cmmn/nav/nav';
+import Left from './cmmn/left/left';
 import reducer from "./reducer";
 
 let store = createStore(reducer);
-
-console.log(store.getState());
 
 class App extends Component {
 
@@ -34,11 +34,14 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.menuList)
     return (
-      <div className="App">
-        {!this.state.menuList ? "loading" : <Main title={"안녕하세요"} menuList={this.state.menuList} /> }
-      </div> 
+      <div>
+        <Nav />
+        <Left />
+        <Provider store={store}>
+          <Main />
+        </Provider>
+      </div>
     );
   }
 }

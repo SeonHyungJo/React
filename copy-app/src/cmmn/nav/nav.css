@@ -1,0 +1,191 @@
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #888;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	outline: 0;
+}
+
+/* 상단 네이게이터 s*/
+
+/* 상단 네비 */
+.navbar {
+    display: flex;
+    border-bottom: 2px dashed #aaaaaa;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* 좌측 상표명 - 지점명 가능 */
+.navbar-header {
+    display: flex;
+    flex: 1;
+    font-size: 35px;
+    padding: 15px;
+    width: 100px;
+}
+
+/* 지점명 */
+.navbar-header .headerbranch {
+    color: #aaa;
+    font-size: 10px;
+    vertical-align: super;
+}
+
+/* 중간 빈공간 */
+.nav{
+    flex: 2;
+}
+
+.navbar .nav > ul{
+    float: right;
+    margin-right: 15px;
+}
+
+.navbar .nav > li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.navbar .nav .active {
+    color: #ff4c8e !important;
+}
+
+/* ------------------------------------------------------- */
+
+
+@media ( max-width : 767px) {
+	body {
+		margin: 0 auto;
+	}
+	.mainbar .matter {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.form-inline button {
+		margin-left: 0px;
+	}
+	.navbar, .navbar-inner {
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	.navbar-collapse .dropdown-big .dropdown-menu {
+		color: #bbb !important;
+	}
+	.navbar-collapse .dropdown-big .dropdown-menu a {
+		color: #ccc !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.navbar-collapse .dropdown-big .dropdown-menu a:hover {
+		color: #aaa !important;
+	}
+	.navbar-collapse .dropdown-big .dropdown-menu h5 {
+		color: #eee !important;
+	}
+	.navbar-collapse .dropdown-menu {
+		padding: 10px 10px !important;
+	}
+	.navbar-collapse .dropdown-menu a {
+		color: #fff !important;
+	}
+	.navbar-collapse .dropdown-menu a:hover {
+		background: transparent !important;
+	}
+	.navbar-collapse .dropdown-menu hr {
+		border-top: 0px solid #eee;
+		border-bottom: 1px solid #333;
+	}
+	.sidebar {
+		margin: 0px;
+		float: none;
+		width: 100%;
+	}
+	.sidebar .sidebar-dropdown {
+		display: block;
+	}
+	.sidebar .sidebar-inner {
+		display: none;
+		max-width: 100vmin;
+		padding: 5px 10px;
+	}
+	.sidebar .sidebar-widget {
+		
+	}
+	.mainbar {
+		top: 30px;
+		margin: 0px;
+		float: none;
+	}
+	.today-datas {
+		text-align: center;
+	}
+	.slide-box {
+		display: none;
+	}
+}
+
+@media ( min-width : 768px) and (max-width: 979px) {
+	.form {
+		margin: 0px !important;
+	}
+	form .control-group {
+		margin: 0px !important;
+	}
+	form .control-label {
+		float: none !important;
+		width: auto !important;
+		text-align: left !important;
+	}
+	form .controls {
+		float: none !important;
+		margin-left: 0px !important;
+	}
+	form .form-actions {
+		padding-left: 0px !important;
+	}
+	.navbar, .navbar-inner {
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	.nav-collapse .dropdown-big .dropdown-menu {
+		color: #bbb !important;
+	}
+	.nav-collapse .dropdown-big .dropdown-menu a {
+		color: #ccc !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.nav-collapse .dropdown-big .dropdown-menu a:hover {
+		color: #aaa !important;
+	}
+	.nav-collapse .dropdown-big .dropdown-menu h5 {
+		color: #eee !important;
+	}
+	.nav-collapse .dropdown-menu {
+		padding: 10px 10px !important;
+	}
+	.nav-collapse .dropdown-menu a {
+		color: #fff !important;
+	}
+	.nav-collapse .dropdown-menu a:hover {
+		background: transparent !important;
+	}
+	.nav-collapse .dropdown-menu hr {
+		border-top: 0px solid #eee;
+		border-bottom: 1px solid #333;
+	}
+	.sidebar {
+		width: 130px;
+	}
+	.mainbar {
+		margin-left: 135px;
+	}
+}
