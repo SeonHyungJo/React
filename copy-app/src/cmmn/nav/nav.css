@@ -4,7 +4,7 @@ a {
 }
 
 a:hover {
-	color: #888;
+	color: #ff4c8e;
 	text-decoration: none;
 }
 
@@ -12,14 +12,16 @@ a:hover, a:focus, a:active {
 	outline: 0;
 }
 
-/* 상단 네이게이터 s*/
 
+/* 상단 네이게이터 s(기본사이즈 삼성 tab S)*/
 /* 상단 네비 */
 .navbar {
     display: flex;
     border-bottom: 2px dashed #aaaaaa;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+    height: 70px;
+    margin-top: 8px;
 }
 
 /* 좌측 상표명 - 지점명 가능 */
@@ -28,7 +30,6 @@ a:hover, a:focus, a:active {
     flex: 1;
     font-size: 35px;
     padding: 15px;
-    width: 100px;
 }
 
 /* 지점명 */
@@ -38,9 +39,10 @@ a:hover, a:focus, a:active {
     vertical-align: super;
 }
 
-/* 중간 빈공간 */
+/* 우측 메뉴 */
 .nav{
-    flex: 2;
+    flex: 2.5;
+    padding-left: 0px;
 }
 
 .navbar .nav > ul{
@@ -54,138 +56,72 @@ a:hover, a:focus, a:active {
     padding: 10px;
 }
 
-.navbar .nav .active {
+.active * {
     color: #ff4c8e !important;
 }
-
+/* 상단 네이게이터 e*/
 /* ------------------------------------------------------- */
+/* 크기에 따른 구분 */
+
+@media ( max-width : 360px) {
+	/* 상단 네비 */
+    .navbar {
+        display: inline-block;
+        border-bottom: 2px dashed #aaaaaa;
+        font-size: 5px;
+        width: 100%;
+        height: 80px;
+    }
+
+    /* 좌측 상표명 - 지점명 가능 */
+    .navbar-header {
+        display: inline-block;
+        font-size: 30px;
+        padding: 0px;
+        padding-left: 20px;
+    }
 
 
-@media ( max-width : 767px) {
-	body {
-		margin: 0 auto;
-	}
-	.mainbar .matter {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.form-inline button {
-		margin-left: 0px;
-	}
-	.navbar, .navbar-inner {
-		margin-top: 0px !important;
-		margin-bottom: 0px !important;
-	}
-	.navbar-collapse .dropdown-big .dropdown-menu {
-		color: #bbb !important;
-	}
-	.navbar-collapse .dropdown-big .dropdown-menu a {
-		color: #ccc !important;
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-	.navbar-collapse .dropdown-big .dropdown-menu a:hover {
-		color: #aaa !important;
-	}
-	.navbar-collapse .dropdown-big .dropdown-menu h5 {
-		color: #eee !important;
-	}
-	.navbar-collapse .dropdown-menu {
-		padding: 10px 10px !important;
-	}
-	.navbar-collapse .dropdown-menu a {
-		color: #fff !important;
-	}
-	.navbar-collapse .dropdown-menu a:hover {
-		background: transparent !important;
-	}
-	.navbar-collapse .dropdown-menu hr {
-		border-top: 0px solid #eee;
-		border-bottom: 1px solid #333;
-	}
-	.sidebar {
-		margin: 0px;
-		float: none;
-		width: 100%;
-	}
-	.sidebar .sidebar-dropdown {
-		display: block;
-	}
-	.sidebar .sidebar-inner {
-		display: none;
-		max-width: 100vmin;
-		padding: 5px 10px;
-	}
-	.sidebar .sidebar-widget {
-		
-	}
-	.mainbar {
-		top: 30px;
-		margin: 0px;
-		float: none;
-	}
-	.today-datas {
-		text-align: center;
-	}
-	.slide-box {
-		display: none;
-	}
+    /* 우측 메뉴 */
+    .nav {
+        display: inline-block;
+        padding: 0px;
+    }
+
+    .navbar .nav > ul{
+        block-size: 40%;
+        margin: 0 0px;
+        padding: 10px;
+    }
+
+    .navbar .nav > li {
+        padding: 5px;
+    }
+}
+
+@media ( min-width : 361px) and ( max-width : 767px) {
+	/* 상단 네비 */
+    .navbar {
+        border-bottom: 1px dashed #aaaaaa;
+        font-size: 12px;
+        height: 50px;
+    }
+
+    /* 좌측 상표명 - 지점명 가능 */
+    .navbar-header {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* 우측 메뉴 */
+    .navbar .nav > ul{
+        margin-right: 10px;
+    }
+
+    .navbar .nav > li {
+        padding: 5px;
+    }
 }
 
 @media ( min-width : 768px) and (max-width: 979px) {
-	.form {
-		margin: 0px !important;
-	}
-	form .control-group {
-		margin: 0px !important;
-	}
-	form .control-label {
-		float: none !important;
-		width: auto !important;
-		text-align: left !important;
-	}
-	form .controls {
-		float: none !important;
-		margin-left: 0px !important;
-	}
-	form .form-actions {
-		padding-left: 0px !important;
-	}
-	.navbar, .navbar-inner {
-		margin-top: 0px !important;
-		margin-bottom: 0px !important;
-	}
-	.nav-collapse .dropdown-big .dropdown-menu {
-		color: #bbb !important;
-	}
-	.nav-collapse .dropdown-big .dropdown-menu a {
-		color: #ccc !important;
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-	.nav-collapse .dropdown-big .dropdown-menu a:hover {
-		color: #aaa !important;
-	}
-	.nav-collapse .dropdown-big .dropdown-menu h5 {
-		color: #eee !important;
-	}
-	.nav-collapse .dropdown-menu {
-		padding: 10px 10px !important;
-	}
-	.nav-collapse .dropdown-menu a {
-		color: #fff !important;
-	}
-	.nav-collapse .dropdown-menu a:hover {
-		background: transparent !important;
-	}
-	.nav-collapse .dropdown-menu hr {
-		border-top: 0px solid #eee;
-		border-bottom: 1px solid #333;
-	}
-	.sidebar {
-		width: 130px;
-	}
-	.mainbar {
-		margin-left: 135px;
-	}
 }
