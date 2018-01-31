@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import Main from './main/Main';
+import reducer from "./reducer";
 
+let store = createStore(reducer);
+
+console.log(store.getState());
 
 class App extends Component {
 
@@ -31,7 +37,7 @@ class App extends Component {
     console.log(this.state.menuList)
     return (
       <div className="App">
-        <Main title={"안녕하세요"} />
+        {!this.state.menuList ? "loading" : <Main title={"안녕하세요"} menuList={this.state.menuList} /> }
       </div> 
     );
   }
