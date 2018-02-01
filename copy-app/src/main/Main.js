@@ -7,7 +7,8 @@ export default class Main extends Component {
     console.log("main")
     console.log(this.props) 
     return ( 
-        <div>
+        <div className="mainBody">
+            
         </div> 
     )};
 } 

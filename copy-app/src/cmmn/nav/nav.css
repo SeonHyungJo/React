@@ -76,6 +76,7 @@ a:hover, a:focus, a:active {
     /* 좌측 상표명 - 지점명 가능 */
     .navbar-header {
         display: inline-block;
+        width: 100%;
         font-size: 30px;
         padding: 0px;
         padding-left: 20px;

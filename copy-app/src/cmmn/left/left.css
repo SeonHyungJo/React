@@ -1,93 +1,37 @@
 .sidebar {
-	width: 130px;
+	width: 160px;
 	float: left;
-	display: block;
 	background: #fff;
 	color: #000;
-	/* 醫뚯륫 硫붾돱 怨좎젙�쓣 �쐞�븳 �꽕�젙 */
+	font-size: 13px;
 	position: fixed;
-	margin-left: 10px;
 	margin-top: 20px;
-	z-index: 10;
+	margin-left: 20px;
+	font-weight: 600;
 }
 
 .sidebar ul {
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
 	list-style-type: none;
-}
-
-.sidebar ul li {
-	list-style-type: none;
-}
-
-.sidebar .sidebar-inner {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
-	position: absolute;
-	z-index: 3;
-	background: #fff;
 }
 
 .sidebar .navi li i {
 	margin-right: 5px;
 }
 
-.sidebar .navi li span i {
-	margin: 0px;
-}
-
-/* 醫뚯륫 硫붾돱 湲��옄 �꽕�젙 */
-.sidebar .navi>li>a {
+.sidebar .navi > li > a {
 	display: block;
-	font-size: 13px;
-	font-weight: 600;
-	color: #000;
 	padding: 10px 15px;
-	border-bottom: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa8f;
 }
 
-.sidebar .navi>li>a:hover, .sidebar .navi>li.open>a {
-	border-bottom: 1px solid #fff;
+.sidebar .navi > li > a:hover, .sidebar .navi > li.open > a {
+	border-bottom: 1px solid #F18AB5;
 	background-color: #F18AB5;
 	color: #fff;
 }
 
-.sidebar .navi li ul {
-	display: none;
-	background: #181818;
-}
-
-.sidebar .navi li.open ul {
-	display: block;
-}
-
-.sidebar .navi li ul li a {
-	display: block;
-	background: none;
-	padding: 10px 0px;
-	padding-left: 42px;
-	text-decoration: none;
-	color: #999;
-	border-bottom: 1px solid #222;
-}
-
-.sidebar .navi li ul li.active a {
-	background: #050505;
-	border-bottom: 1px solid #222;
-}
-
-/* .sidebar .navi li ul li.active a:hover {
-	background: #050505;
-} */
-
-.sidebar .navi li ul li a:hover {
-	background: #131313;
-	border-bottom: 1px solid #222;
-}
-
-/* �궗�씠�뱶諛� 移쇰씪 */
 .sidebar .navi>li.npink>a:hover, .sidebar .navi>li.open.npink>a,
 	.sidebar .navi>li.current.npink>a {
 	color: white;
@@ -98,8 +42,7 @@
 	transition: background 0.5s ease;
 }
 
-/* �룿�궗�씠利� 硫붾돱�떎�슫 */
-.sidebar .sidebar-dropdown* {
+.sidebar .sidebar-dropdown * {
 	text-decoration: none;
 }
 
@@ -125,7 +68,6 @@
 	color: white;
 }
 
-/* 紐⑤컮�씪 �궗�씠�뱶 諛� */
 @media ( max-width : 767px) {
 	body {
 		margin: 0 auto;
@@ -181,9 +123,7 @@
 		max-width: 100vmin;
 		padding: 5px 10px;
 	}
-	.sidebar .sidebar-widget {
-		
-	}
+	
 	.mainbar {
 		top: 30px;
 		margin: 0px;

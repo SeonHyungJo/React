@@ -9,7 +9,6 @@ function Left(){
       </div>
       <div className="sidebar-inner">
         <ul className="navi">
-        
           <li className="npink current leftBtn" id="imhome">
             <a href="#" onclick="javascript:dontSaveOrderConfirm('imhome', 'm')"> 
               <i className="fa fa-desktop"></i> 아임 홈
