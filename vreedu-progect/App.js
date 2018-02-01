@@ -1,13 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {text: ''};
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        <TextInput
+          style={{height: 40}}
+          placeholder="Type here to translate!"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <Text style={{padding: 10, fontSize: 42}}>
+          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+        </Text>
       </View>
     );
   }
@@ -15,10 +26,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    top: 70,
   },
 });
