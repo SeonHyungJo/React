@@ -21,7 +21,11 @@ a:hover, a:focus, a:active {
     font-weight: 600;
     font-size: 18px;
     height: 70px;
-    margin-top: 8px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
 }
 
 /* 좌측 상표명 - 지점명 가능 */
@@ -75,8 +79,7 @@ a:hover, a:focus, a:active {
 
     /* 좌측 상표명 - 지점명 가능 */
     .navbar-header {
-        display: inline-block;
-        width: 100%;
+        display: block;
         font-size: 30px;
         padding: 0px;
         padding-left: 20px;
