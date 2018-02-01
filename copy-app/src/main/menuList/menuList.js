@@ -61,7 +61,7 @@ export default class MainList extends Component {
                 <div className="upDownDiv">
                   <span
                     className="upDownBtn"
-                    onclick="javascript:mountClick('down', '${mainMenu.fCode}');"
+                    onClick="javascript:mountClick('down', '${mainMenu.fCode}');"
                   >
                     -
                   </span>
@@ -74,7 +74,7 @@ export default class MainList extends Component {
                   />
                   <span
                     className="upDownBtn"
-                    onclick="javascript:mountClick('up','${mainMenu.fCode}', '${mainMenu.fRestMount}');"
+                    onClick="javascript:mountClick('up','${mainMenu.fCode}', '${mainMenu.fRestMount}');"
                   >
                     +
                   </span>
