@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Image,
-  Alert,
   Button,
   StatusBar,
   ScrollView,
@@ -9,7 +8,7 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  Dimensions
+  Dimensions,
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
 import Header from "./src/component/header";
@@ -18,40 +17,12 @@ import BodyHeader from "./src/component/bodyHeader";
 import BottomContent from "./src/component/bottomContent";
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedIndex: 2,
-      showCancel: false
-    };
-  }
-
-  toggleCancel = () => {
-    this.setState({
-      showCancel: !this.state.showCancel
-    });
-  };
-
-  _renderCancel = () => {
-    if (this.state.showCancel) {
-      return (
-        <TouchableHighlight onPress={this.toggleCancel()}>
-          <View>
-            <Text style={styles.cancelButtonText}>Cancel</Text>
-          </View>
-        </TouchableHighlight>
-      );
-    } else {
-      return null;
-    }
-  };
-
   render() {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
-        <Header />
 
+        <Header />
         <ScrollView>
           <BodyHeader />
 
@@ -188,20 +159,20 @@ export default class App extends React.Component {
           <ImageBackground
             style={styles.imageBackround}
             source={require("./src/images/allOfNoteImg.png")}
-          > 
+          >
             <View>
               <Text style={styles.contentTitleG}>모두의 공책</Text>
               <Text style={styles.contentTitleG}>(Everyone Share Book)</Text>
             </View>
 
-            <View style={{marginLeft: 50, marginRight: 50, marginBottom: 30}}>
+            <View style={{ marginLeft: 50, marginRight: 50, marginBottom: 30 }}>
               <Text style={styles.contentDetailTitle}>
-              번역 라이선스를공개하고 집단 번역 또는 번역사들이 번역을 하여 국내
-              뿐 아니라 외국에 책을 퍼블리싱
+                번역 라이선스를공개하고 집단 번역 또는 번역사들이 번역을 하여
+                국내 뿐 아니라 외국에 책을 퍼블리싱
               </Text>
             </View>
-            
-            <View style={{marginLeft: 30, marginRight: 30}}>
+
+            <View style={{ marginLeft: 30, marginRight: 30 }}>
               <Text style={styles.allBookDetail}>
                 쓰기 번역을 통한 학습 트레이닝(듣기, 일기, 스피칭 강의) 학습
                 진행
@@ -231,7 +202,7 @@ const styles = StyleSheet.create({
   imageBackround: {
     minHeight: Dimensions.get("window").height - 100,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   bodyViewText: {
     justifyContent: "center",
@@ -291,7 +262,7 @@ const styles = StyleSheet.create({
     marginRight: 30
   },
   allBookDetail: {
-    color: '#fff',
-    fontSize: 15,
-  },
+    color: "#fff",
+    fontSize: 15
+  }
 });

@@ -1,12 +1,8 @@
 import React from "react";
 import {
-  Image,
-  Alert,
   Text,
   StyleSheet,
   View,
-  TouchableOpacity,
-  Dimensions
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
 
@@ -15,7 +11,7 @@ export default class Footer extends React.Component {
     return (
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Copyright © Vreedu Website 2017 by 000.
+          Copyright © Vreedu Android 2018 by Sseon
         </Text>
         <Text style={styles.footerText}>
           All pictures cannot be copied without permission.

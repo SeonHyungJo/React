@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  Image,
-  Alert,
   Text,
   StyleSheet,
   View,
-  TouchableOpacity,
   Dimensions
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
@@ -82,11 +79,11 @@ export default class BottomContent extends React.Component {
           <Marker
             coordinate={{
               latitude: 37.400218,
-              longitude: 27.104954
+              longitude: 127.104954,
             }}
             centerOffset={{
               x: 37.400218,
-              y: 27.104954
+              y: 127.104954,
             }}
             pinColor={"#000"}
             flat={true}

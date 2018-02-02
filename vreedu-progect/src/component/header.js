@@ -1,20 +1,18 @@
 import React from "react";
 import {
   Image,
-  Alert,
   Text,
   StyleSheet,
   View,
-  TouchableOpacity,
-  Dimensions
+  Dimensions,
+  Linking,
+  Alert
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
 
 export default class Header extends React.Component {
       
   render() {
-    const heightW = Dimensions.get('window').height
-    console.log(heightW)
     return (
       <View style={styles.header}>
         <View style={styles.headerTextView}>
@@ -37,7 +35,7 @@ export default class Header extends React.Component {
               size={20}
               color="#fff"
               onPress={() => {
-                Alert.alert("페북 로그인");
+                Linking.openURL('https://www.facebook.com/Vreedu-1527313873997437')
               }}
             />
             <Entypo
@@ -45,7 +43,7 @@ export default class Header extends React.Component {
               size={20}
               color="#fff"
               onPress={() => {
-                Alert.alert("트위터 이동");
+                Alert.alert("준비중입니다.")
               }}
             />
             <Entypo
@@ -53,7 +51,7 @@ export default class Header extends React.Component {
               size={20}
               color="#fff"
               onPress={() => {
-                Alert.alert("인스타 그램 이동");
+                Alert.alert("준비중입니다.")
               }}
             />
           </View>
@@ -90,7 +88,6 @@ const styles = StyleSheet.create({
   },
   headerTitleView: {
     flex: 2,
-    flexDirection: "row",
     alignItems: "center",
     marginLeft: 10,
     marginRight: 10
@@ -98,7 +95,6 @@ const styles = StyleSheet.create({
   titleLogo: {
     flex: 1,
     resizeMode: "contain",
-    marginRight: 50
   },
   iconView: {
     flex: 1,
