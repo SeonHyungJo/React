@@ -9,12 +9,13 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  Dimensions,
+  Dimensions
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
-import Header from './src/component/header';
-import Footer from './src/component/footer';
-import BodyHeader from './src/component/bodyHeader';
+import Header from "./src/component/header";
+import Footer from "./src/component/footer";
+import BodyHeader from "./src/component/bodyHeader";
+import BottomContent from "./src/component/bottomContent";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -53,6 +54,8 @@ export default class App extends React.Component {
 
         <ScrollView>
           <BodyHeader />
+
+          {/* 온북 설명 */}
           <View style={styles.bodyViewText}>
             <Image
               style={styles.contentImage}
@@ -64,15 +67,15 @@ export default class App extends React.Component {
               매치되어 있어 전자화면의 글 읽기에 집중할 수 있게 해 줍니다.
             </Text>
 
-            <View style={styles.contentDetail2}>
+            <View>
               <Text style={styles.contentDetailSub2}>
-                듣기, 읽기, 말하기, 단어사전, 한글 번역, 등을 지원{" "}
+                듣기, 읽기, 말하기, 단어사전, 한글 번역, 등을 지원
               </Text>
               <Text style={styles.contentDetailSub2}>
                 세계 뉴스 : 미국 앵커의 원어민 음성과 기사 내용 제공
               </Text>
               <Text style={styles.contentDetailSub2}>
-                대중 소설 : 세계 100대 고전문학, 단편 소설{" "}
+                대중 소설 : 세계 100대 고전문학, 단편 소설
               </Text>
               <Text style={styles.contentDetailSub2}>
                 연설문 : 세계 유명인들의 연설문
@@ -84,22 +87,25 @@ export default class App extends React.Component {
             </View>
           </View>
 
-          <View style={styles.bodyViewImage}>
+          <ImageBackground
+            style={styles.imageBackround}
+            source={require("./src/images/onnBookBg.png")}
+          >
             <View style={{ flexDirection: "row" }}>
               <Text style={styles.contentTitleG}>온북(OnnBook)</Text>
-              <Text style={styles.contentTitleW}>주요기능</Text>
+              <Text style={styles.contentTitleW}> 주요기능</Text>
             </View>
 
             <View style={styles.contentDetailList}>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>영어 듣기 평가</Text>
                 <Text style={styles.contentDetailSub}>
                   중학교/고등학교/토익 기출문제 중심 듣기 평가 청취훈련
                 </Text>
               </View>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>세계단편소설</Text>
                 <Text style={styles.contentDetailSub}>
                   영어도서관. 세계 100대 고전문학, 단편 소설 원어민 음성과
@@ -110,14 +116,14 @@ export default class App extends React.Component {
 
             <View style={styles.contentDetailList}>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>북마크</Text>
                 <Text style={styles.contentDetailSub}>
                   스터디 중 북마크한 모든 위치 표시
                 </Text>
               </View>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>영문 명연설</Text>
                 <Text style={styles.contentDetailSub}>
                   세계 100대 명연설문 원문제공 및 원어민 음성과 텍스트 매치 리딩
@@ -127,7 +133,7 @@ export default class App extends React.Component {
 
             <View style={styles.contentDetailList}>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>뉴스, 신문 청취</Text>
                 <Text style={styles.contentDetailSub}>
                   최신 영자신문 음성서비스 제공 미국 앵커의 음성과 기사제고,
@@ -135,7 +141,7 @@ export default class App extends React.Component {
                 </Text>
               </View>
               <View style={styles.contentDetail}>
-                <MaterialIcons name="phone-iphone" size={50} color="#51D89E" />
+                <MaterialIcons name="phone-iphone" size={70} color="#51D89E" />
                 <Text style={styles.contentDetailTitle}>세계의 명언</Text>
                 <Text style={styles.contentDetailSub}>
                   하루에 한중 명언으로 배우는 영어 영문 명언 원어민 음성과
@@ -143,7 +149,8 @@ export default class App extends React.Component {
                 </Text>
               </View>
             </View>
-          </View>
+          </ImageBackground>
+          {/* 온북 주요기능 */}
 
           {/* 강의 솔루션 */}
           <View style={styles.bodyViewText}>
@@ -158,7 +165,7 @@ export default class App extends React.Component {
               수있습니다.
             </Text>
 
-            <View style={styles.contentDetail2}>
+            <View>
               <Text style={styles.contentDetailSub2}>
                 탭 카메라를 통한 강사 화면 표현 기능
               </Text>
@@ -178,54 +185,37 @@ export default class App extends React.Component {
           </View>
 
           {/* 모두의 공책 */}
-          <View style={styles.bodyViewImage}>
-            <Text style={styles.contentTitleG}>모두의 공책</Text>
-            <Text style={styles.contentTitleG}>(Everyone Share Book)</Text>
-
-            <View style={styles.contentDetailList}>
-              <View style={styles.contentDetail}>
-                <Text style={styles.contentDetailTitle}>
-                  번역 라이선스를공개하고 집단 번역 또는 번역사들이 번역을 하여
-                  국내 뿐 아니라 외국에 책을 퍼블리싱
-                </Text>
-                <Text style={styles.contentDetailSub}>
-                  번역 라이선스를공개하고 집단 번역 또는 번역사들이 번역을 하여
-                  국내 뿐 아니라 외국에 책을 퍼블리싱
-                </Text>
-              </View>
-            </View>
-          </View>
-
-          <View style={styles.bodyViewText}>
-
-            <View style={styles.materialContain}>
-              <View style={styles.materialContent}>
-                <MaterialIcons style={styles.materialIcon} name="local-parking" size={70} color="#000" />
-                <Text style={styles.materialText}>주차</Text>
-              </View>
-              <View style={styles.materialContent}>
-                <MaterialIcons style={styles.materialIcon} name="wifi" size={70} color="#000" />
-                <Text style={styles.materialText}>무선 인터넷</Text>
-              </View>
+          <ImageBackground
+            style={styles.imageBackround}
+            source={require("./src/images/allOfNoteImg.png")}
+          > 
+            <View>
+              <Text style={styles.contentTitleG}>모두의 공책</Text>
+              <Text style={styles.contentTitleG}>(Everyone Share Book)</Text>
             </View>
 
-            <View style={styles.materialContain}>
-              <View style={styles.materialContent}>
-                <MaterialIcons style={styles.materialIcon} name="android" size={70} color="#000" />
-                <Text style={styles.materialText}>화장실</Text>
-              </View>
-              <View style={styles.materialContent}>
-                <MaterialIcons style={styles.materialIcon} name="accessible" size={70} color="#000" />
-                <Text style={styles.materialText}>장애인 편의시설</Text>
-              </View>
+            <View style={{marginLeft: 50, marginRight: 50, marginBottom: 30}}>
+              <Text style={styles.contentDetailTitle}>
+              번역 라이선스를공개하고 집단 번역 또는 번역사들이 번역을 하여 국내
+              뿐 아니라 외국에 책을 퍼블리싱
+              </Text>
             </View>
-
-            <View style={{alignSelf: 'center'}}>
-              <Text style={styles.contentTitleG}>경기도 성남시 분당구 대왕판교로654번길 12 경기창조혁신센터 9층</Text>
+            
+            <View style={{marginLeft: 30, marginRight: 30}}>
+              <Text style={styles.allBookDetail}>
+                쓰기 번역을 통한 학습 트레이닝(듣기, 일기, 스피칭 강의) 학습
+                진행
+              </Text>
+              <Text style={styles.allBookDetail}>
+                집단 번역에 전문 지식을 토대로 한 번역에 참여하고 출간 판매하여
+                지분수익
+              </Text>
+              <Text style={styles.allBookDetail}>
+                작가로서 경험, 노하우 등을 집필하고 전세계에 출간판매 수익
+              </Text>
             </View>
-            <Text>지도</Text>
-          </View>
-
+          </ImageBackground>
+          <BottomContent />
           <Footer />
         </ScrollView>
       </View>
@@ -238,33 +228,29 @@ const styles = StyleSheet.create({
     // paddingTop: 22,
     flex: 1
   },
+  imageBackround: {
+    minHeight: Dimensions.get("window").height - 100,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   bodyViewText: {
-    paddingTop: 60,
-    paddingBottom: 60,
+    justifyContent: "center",
     backgroundColor: "#F5F7EB",
     alignItems: "center",
-    minHeight: Dimensions.get('window').height - 120
-  },
-  bodyViewImage: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    backgroundColor: "#000",
-    alignItems: "center",
-    minHeight: Dimensions.get('window').height
+    minHeight: Dimensions.get("window").height - 100
   },
   contentTitleG: {
     fontSize: 30,
     color: "#51D89E",
     fontWeight: "bold",
-    marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    textAlign: "center"
   },
   contentTitleW: {
     fontSize: 30,
     color: "#fff",
     fontWeight: "bold",
-    marginTop: 20,
-    marginBottom: 20
+    marginBottom: 10
   },
   contentDetailList: {
     flexDirection: "row"
@@ -275,9 +261,7 @@ const styles = StyleSheet.create({
   },
   contentDetail: {
     flex: 1,
-    alignItems: "center",
-    marginLeft: 10,
-    marginRight: 10
+    alignItems: "center"
   },
   contentDetailTitle: {
     fontSize: 20,
@@ -285,12 +269,10 @@ const styles = StyleSheet.create({
     color: "#fff"
   },
   contentDetailSub: {
-    fontSize: 12,
+    fontSize: 15,
+    textAlign: "center",
     fontWeight: "400",
     color: "#fff"
-  },
-  contentDetail2: {
-    alignItems: "flex-start"
   },
   contentDetailTitle2: {
     fontSize: 20,
@@ -308,21 +290,8 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30
   },
-  materialContain: {
-    flexDirection: 'row',
-    alignItems: "center"
-  },
-
-  materialContent: {
-    flex: 1,
-  },
-
-  materialText: {
-    textAlign: 'center',
-    fontSize: 25,
-    fontWeight: 'bold'
-  },
-  materialIcon:{
-    textAlign: 'center',
+  allBookDetail: {
+    color: '#fff',
+    fontSize: 15,
   },
 });
