@@ -98,7 +98,8 @@ export default class BottomContent extends React.Component {
 const styles = StyleSheet.create({
   bottomConponent: {
     justifyContent: "center",
-    height: Dimensions.get("window").height
+    height: Dimensions.get("window").height,
+    backgroundColor: "#F5F7EB",
   },
   iconView: {
     flexDirection: "row"
