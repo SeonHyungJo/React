@@ -3,19 +3,18 @@ import {
   Image,
   Alert,
   Button,
-  ActivityIndicator,
   StatusBar,
-  AppRegistry,
   ScrollView,
   Text,
-  FlatList,
   StyleSheet,
   View,
-  SectionList,
-  TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  Dimensions,
 } from "react-native";
 import { Entypo, MaterialIcons } from "react-native-vector-icons";
+import Header from './src/component/header';
+import Footer from './src/component/footer';
+import BodyHeader from './src/component/bodyHeader';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -50,72 +49,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
-        <View style={styles.header}>
-          <View style={styles.headerTextView}>
-            <Text style={styles.headerText}>
-              <Entypo name="phone" size={15} color="#fff" /> 010-2992-9736
-            </Text>
-            <Text style={styles.headerText}>
-              <Entypo name="clock" size={15} color="#fff" /> Mon-Sat: 8:00 -
-              17:00
-            </Text>
-          </View>
-          <View style={styles.headerTextView}>
-            <Text style={styles.headerText}>
-              <MaterialIcons name="email" size={15} color="#fff" />
-              esketch@gmail.com
-            </Text>
-            <View style={styles.iconView}>
-              <Entypo
-                name="facebook-with-circle"
-                size={20}
-                color="#fff"
-                onPress={() => {
-                  Alert.alert("페북 이동");
-                }}
-              />
-              <Entypo
-                name="twitter-with-circle"
-                size={20}
-                color="#fff"
-                onPress={() => {
-                  Alert.alert("트위터 이동");
-                }}
-              />
-              <Entypo
-                name="instagram-with-circle"
-                size={20}
-                color="#fff"
-                onPress={() => {
-                  Alert.alert("인스타 그램 이동");
-                }}
-              />
-            </View>
-          </View>
+        <Header />
 
-          <View style={styles.headerTitleView}>
-            <Image
-              style={styles.titleLogo}
-              source={require("./src/images/vreedu_logo.png")}
-            />
-            <TouchableOpacity style={styles.list}>
-              <MaterialIcons name="list" size={35} color="#fff" />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <ScrollView style={styles.scrollBody}>
-          {/* <ImageBackground imageStyle={{resizeMode: 'stretch'}} source={require('./src/images/intro-bg.jpg')}>
-          </ImageBackground> */}
-
-          <View style={styles.bodyViewHeader}>
-            <Text style={styles.contentTitleW}>브리드</Text>
-            <Text style={styles.contentTitleW}>
-              국제 어학 솔루션 개발 및 공급. 국제 무역 중개업을 통한 솔루션 수출
-              사업
-            </Text>
-          </View>
-
+        <ScrollView>
+          <BodyHeader />
           <View style={styles.bodyViewText}>
             <Image
               style={styles.contentImage}
@@ -289,9 +226,7 @@ export default class App extends React.Component {
             <Text>지도</Text>
           </View>
 
-          <View style={styles.footer}>
-            <Text style={styles.headerText}>footer</Text>
-          </View>
+          <Footer />
         </ScrollView>
       </View>
     );
@@ -303,64 +238,19 @@ const styles = StyleSheet.create({
     // paddingTop: 22,
     flex: 1
   },
-  header: {
-    flex: 0.2,
-    backgroundColor: "#39313C"
-  },
-  headerTextView: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    marginLeft: 10,
-    marginRight: 10
-  },
-  headerText: {
-    flex: 1,
-    color: "#fff",
-    textAlign: "justify",
-    fontSize: 15
-  },
-  headerTitleView: {
-    flex: 2,
-    flexDirection: "row",
-    alignItems: "center",
-    marginLeft: 10,
-    marginRight: 10
-  },
-  titleLogo: {
-    flex: 1,
-    resizeMode: "contain",
-    marginRight: 50
-  },
-  iconView: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around"
-  },
-  list: {
-    marginRight: 15,
-    backgroundColor: "rgba(255,255,255,0.2)",
-    borderRadius: 5
-  },
-  bodyViewHeader: {
-    backgroundColor: "#000",
-    alignItems: "center",
-    minHeight: 700
-  },
   bodyViewText: {
-    paddingTop: 30,
-    paddingBottom: 30,
+    paddingTop: 60,
+    paddingBottom: 60,
     backgroundColor: "#F5F7EB",
     alignItems: "center",
-    minHeight: 700
+    minHeight: Dimensions.get('window').height - 120
   },
   bodyViewImage: {
     paddingTop: 30,
     paddingBottom: 30,
     backgroundColor: "#000",
     alignItems: "center",
-    minHeight: 700
+    minHeight: Dimensions.get('window').height
   },
   contentTitleG: {
     fontSize: 30,
@@ -435,10 +325,4 @@ const styles = StyleSheet.create({
   materialIcon:{
     textAlign: 'center',
   },
-  footer: {
-    flex: 1,
-    height: 70,
-    backgroundColor: "#39313C"
-  },
-  scrollBody: {}
 });
