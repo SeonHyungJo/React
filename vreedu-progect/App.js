@@ -126,8 +126,8 @@ export default class App extends React.Component {
           {/* 강의 솔루션 */}
           <View style={styles.bodyViewText}>
             <Image
-              style={styles.contentImage}
-              source={require("./src/images/onnBookImg.png")}
+              style={{width: 310, height:240}}
+              source={require("./src/images/classBookImg.png")}
             />
             <Text style={styles.contentTitleG}>강의 솔루션 (Class Book)</Text>
             <Text style={styles.contentDetailTitle2}>

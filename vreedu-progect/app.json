@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "vreedu-progect",
+    "name": "vreedu",
     "description": "This project is really great.",
-    "slug": "vreedu-progect",
+    "slug": "vreedu",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
@@ -16,6 +16,9 @@
     },
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package" : "com.sseon.vreedu"
     }
   }
 }
