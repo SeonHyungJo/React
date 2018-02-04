@@ -1,35 +1,28 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { FormLabel, FormInput, FormValidationMessage, Button } from 'react-native-elements'
+import { Router, Scene } from 'react-native-router-flux';
+
+import Home from './components/Home'
+import Chat from './components/Chat'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.containerStyle}>
-        <View style={styles.containerStyle}>
-          <FormLabel>User ID</FormLabel>
-          <FormInput />
-        </View>
-        <View style={styles.containerStyle}>
-          <FormLabel>Nickname</FormLabel>
-          <FormInput />
-        </View>
-        <View style={styles.containerStyle}>
-          <Button
-            buttonStyle={{ backgroundColor: '#2096f3' }}
-            title='Connect'
-          />
-        </View>
-        <View style={styles.containerStyle}>
-          <FormValidationMessage>Error message</FormValidationMessage>
-        </View>
-      </View>
+      <Router>
+        <Scene key='root'>
+            <Scene key='home' component={Home} title='Home'/>
+            <Scene key='chat' component={Chat} title='Chat'/>
+        </Scene>
+      </Router>
     );
   }
 }
 
-const styles = {
-  containerStyle: {
-    marginTop: 10
-  }
-}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
