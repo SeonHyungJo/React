@@ -36,7 +36,7 @@ October 23, 2018 리액트 블로그에 새로운 글이 올라왔다.
 </br>
 </br>
 
-### Example
+### :point_right: Example
 
 ```js
 // function
@@ -60,7 +60,7 @@ const WrappedCount = React.memo(Count);
 </br>
 </br>
 
-## React.Lazy
+## React.Lazy :sunny:
 
 **lazy** 는 `Suspense` 와 함께 `Code-Splitting` 을 제공 한다.
 </br>
@@ -111,5 +111,47 @@ function MyComponent() {
 </br>
 
 그렇기 때문에 `Suspense` 를 통해아직 로딩이 되지 않은 `lazy` 컴포넌트의 `fallback` 을 표시할수 있도록 해야 한다.
+</br>
+</br>
 
 ## ETC
+
+나머지는 간단하게 살펴봐도 될 것 같다.
+
+### getDerivedStateFromError
+
+기본에 16.3버전에서 추가가 된 `componentDidCatch`은 commit 단계에서 호출이 되어서 사이드 이펙트가 허용이 되었지만 새로운 `getDerivedStateFromError`는 렌더 단계에서 호출이 되어 사이드 이펙트를 허용하지 않는다. 이후에는 `getDerivedStateFromError`를 사용해야 한다고 한다.
+
+### contextType
+
+기존에 추가가 개선이 된 `context`를 클래스 내부에서 사용을 쉽게 하기 위해 추가된 기능이다.
+</br>
+
+모든 라이프 사이클과 랜더 함수에서 참조 할 수 있다.
+</br>
+
+```js
+class App extends React.Component {
+  componentDidMount() {
+    const { color } = this.context;
+  }
+  render() {
+    const { color } = this.context;
+  }
+}
+App.contextType = React.createContext({ color: 'gray' });
+```
+
+</br>
+</br>
+
+### StrictMode
+
+16.3 에서 추가된 `StrictMode` 는 잠재적 문제를 식별해서 경고를 제공해주는 역할을 하고 있다.
+</br>
+
+여기에 경고를 발생시키는 2가지 요소가 추가되었다
+</br>
+
+1. `ReactDOM.findDOMNode()`: 대부분의 경우에서 이 API 를 쓸일이 없다고 한다. 따라서 StrictMode 가 쓰지말라 경고를 알릴것이다.
+2. `contextTypes` 이나 `getChildContext` 를 사용하는 레거시 컨텍스트들 일부러 레거시 컨텍스트들에 성능저하를 했다고 한다. 그러면서,새로운 `contextAPI`로 업그레이드 할 것을 권고 하고 있다.
