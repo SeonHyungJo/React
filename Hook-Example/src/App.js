@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Counter from './Counter';
-//import Form from './Form';
+import Form from './Form';
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Counter/>
-        {/* <Form /> */}
+        <Form />
       </div>
     );
   }
