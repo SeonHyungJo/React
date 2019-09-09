@@ -1,28 +1,40 @@
-# React Study Note
+# **React Note**
 
-나의 공부한 내역을 제대로 적을 수 있는 공간이 되길 바라며 **어느 누구에게 도움이 되는 Textbook이 되었으면 좋겠다.**
-</br>
+React 한 주에 한 개씩 정리하기
 
-## **React Raod Map**
+### **React Raod Map**
 
 어떤 한분이 친절하게도 정리를 해놓은 로드맵이 있다 우리가 흔히? 알고 있는 Front, Back End의 Road Map을 모티브로 만드신듯 하다.
 
-- [React-Developer-Roadmap](https://github.com/adam-golab/react-developer-roadmap)
+> [React-Developer-Roadmap](https://github.com/adam-golab/react-developer-roadmap)
 
-## **Forward**
+## :pushpin: 한 주에 하나는 정리하기
 
-- 기본적인 이론(추가적으로 하거나 해야하는 내용은 Progect로 정리)
-- 실습한 예제파일(React, React-DOM, React-native)
+1. **기본 내용은 React 블로그를 기준으로 한다.**
+2. **1번의 내용을 기준으로 하되 현재 동시에 진행 중인 [500개 리액트 질문리스트](https://github.com/SeonHyungJo/reactjs-interview-questions-korean)의 내용을 추가적으로 진행한다.**
+   1. Contributor은 언제나 환영입니다.(Issue로 올려주세요))
+3. 이외의 내용은 별도의 표시를 한다.
 
-</br>
+## :page_with_curl: Post List
 
-## **New note**
+날짜를 기준으로 명세한다. 그래야 내가 얼마나 나태한지 알 수 있다.
+
+#### :calendar: 2019.09.09
 
 - [v16.6 새로운 기능](/Posts/Version-16.6.md)
-- [새로 생길 Hook이란?](/Posts/Hook.md)
+- [새로 생긴 Hook이란?](/Posts/Hook.md)
+- [Portal Component](/Posts/Portal-Component.md)
+- [Context](/Posts/Context.md)
 
-</br>
+#### :calendar: 2019.09 3주차
 
-## Issue
+- **To Be Continue...** :smiley:
 
-저에게 부족해보이거나 추가되었으면 좋겟다는 내용은 issue에 등록해주세요. 즐거운  마음으로 받아들이고 배워나가겠습니다.
+## :sos: [Issue](https://github.com/SeonHyungJo/React-Dev-Note/issues)
+
+다음주에 진행할 내용을 [Issue](https://github.com/SeonHyungJo/React-Dev-Note/issues)에 올려서 관리한다.
+
+### :construction: Label
+
+- :raised_hand: 다음주에 할 거예요
+- :pencil: 수정하세요
