@@ -82,7 +82,7 @@ const MyContext = React.createContext(defaultValue);
 - 이러한 전파는 `shouldComponentUpdate`의 영향을 받지 않기 때문에 중간에 있는 컴포넌트가 업데이트를 중지한다고 해도 트리 끝에 있는 컴포넌트까지 전달된다.
 - [Object.is](http://object.is/)를 사용해서 이전값과 새로운 값을 비교해 측정된다.
 
-## `Class.contextType`
+### `Class.contextType`
 
 ```js
 class MyClass extends React.Component {
