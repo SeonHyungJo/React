@@ -19,22 +19,19 @@ React 한 주에 한 개씩 정리하기
 
 날짜를 기준으로 명세한다. 그래야 내가 얼마나 나태한지 알 수 있다.
 
-#### :calendar: 2019.09.09
+#### :calendar: 목차
 
 - [v16.6 새로운 기능](/Posts/Version-16.6.md)
 - [새로 생긴 Hook이란?](/Posts/Hook.md)
 - [Portal Component](/Posts/Portal-Component.md)
 - [Context](/Posts/Context.md)
-
-#### :calendar: 2019.09.18
-
 - [High Order Component(고차 컴포넌트)](/Posts/High-Order-Componrnt.md)
 
-#### :calendar: 2019.09.25
+#### :calendar: 2019.10.14
 
-- [React란?](/Posts/React.md)
+- [VirtualDOM?](/Posts/VirtualDOM.md)
 
-#### :calendar: 2019.10 1주차
+#### :calendar: 2019.10 4주차
 
 - **To Be Continue...** :smiley:
 
