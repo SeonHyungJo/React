@@ -26,6 +26,8 @@ React 한 주에 한 개씩 정리하기
 - [Portal Component](/Posts/Portal-Component.md)
 - [Context](/Posts/Context.md)
 - [High Order Component(고차 컴포넌트)](/Posts/High-Order-Componrnt.md)
+- [React란?](/Posts/React.md)
+- [Memo](/Posts/Memo.md)
 
 #### :calendar: 2019.10.14
 
