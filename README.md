@@ -35,7 +35,7 @@ React 한 주에 한 개씩 정리하기
 
 #### :calendar: 2019.10.21
 
-- [VirtualDOM](/Posts/JSX.md)
+- [JSX](/Posts/JSX.md)
 
 #### :calendar: 2019.11 1주차
 
