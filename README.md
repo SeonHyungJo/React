@@ -37,7 +37,11 @@ React 한 주에 한 개씩 정리하기
 
 - [JSX](/Posts/JSX.md)
 
-#### :calendar: 2019.11 1주차
+#### :calendar: 2019.11.06
+
+- [State VS Props](/Posts/StateVSProps.md)
+
+#### :calendar: 2019.11.3주차
 
 - **To Be Continue...** :smiley:
 
@@ -49,3 +53,8 @@ React 한 주에 한 개씩 정리하기
 
 - :raised_hand: 다음주에 할 거예요
 - :pencil: 수정하세요
+
+#### 참고자료 모음
+
+- [props vs state](https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
+- [ReactJS: Props vs. State](https://lucybain.com/blog/2016/react-state-vs-pros/)
