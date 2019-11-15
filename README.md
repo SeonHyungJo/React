@@ -33,6 +33,10 @@ React 한 주에 한 개씩 정리하기
 
 - [VirtualDOM](/Posts/VirtualDOM.md)
 
+#### :calendar: 2019.10.21
+
+- [JSX](/Posts/JSX.md)
+
 #### :calendar: 2019.11.06
 
 - [State VS Props](/Posts/StateVSProps.md)
