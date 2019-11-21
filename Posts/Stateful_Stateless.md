@@ -1,14 +1,61 @@
 # Stateful VS Stateless
 
-컴포넌트를 분류하는 또 다른 일반적인 방식입니다. 분류의 기준은 간단합니다. state가 있는 컴포넌트와 state가 없는 컴포넌트이지요.
+지난번 글에서 State와 Props에 대해서 간단하게 알아보았고, 이어서 관련이 있는 Stateful과 Stateless에 대해서 알아보자.
 
-### **Stateful 컴포넌트**
+> [State와 Props](링크 추가하기)
 
-Stateful 컴포넌트는 늘 클래스 컴포넌트입니다. 앞서 얘기했듯이 stateful 컴포넌트에는 생성자에서 초기화되는 state가 있습니다.
+이름에서 이미 느껴지듯이 어느 하나는 state가 엄청나게 가득할 것 같고, 다른 하나는 state 자체가 없을 것 같은 이름이다. 
+그에 걸맞게 형태 역시 state가 있고 없는 컴포넌트로 나뉜다.
 
-우리는 state 오브젝트를 만들고, count를 0으로 함으로써 state를 초기화했었습니다. [클래스 영역](https://github.com/tc39/proposal-class-fields)에서 보다 쉽게 호출하도록 제안된 대체 구문(syntax)가 있습니다. ECMAScript 명세에 들어가 있지는 않지만, 여러분이 Babel transpiler를 사용한다면 이 구문이 기발하게 작동할 것입니다.
+## **Stateful Component**
 
-이 새로운 구문을 이용해 생성자를 사용하지 않을 수 있습니다.
+> 컴포넌트의 동작이 컴포넌트의 state에 따라 달라진다면 stateful 컴포넌트라고 할 수 있다. stateful 컴포넌트는 항상 class 컴포넌트 이며 constructor에서 초기화가 되어 state를 가지게 된다.
+
+Stateful 컴포넌트는 항상 클래스 컴포넌트이다. 이럴게 아니라 그냥 Stateful하다는 것은 클래스 컴포넌트를 사용한다고 하자.
+
+> 아직 예외적으로 클래스 컴포넌트이지만 state가 없는 경우는 아주아주 많다.(많은 분들이 사용하시기에)
+
+> 또 다른 예외의 경우는 클래스 컴포넌트가 아닌데 state가 존재한다.(Hook이 나오고 나서 모든 것은 달라졌다.)
+
+```jsx
+class App extends Component {
+  
+  // Not required anymore
+  constructor() {
+      super();
+      this.state = {
+        count: 1
+      }
+  }
+  
+  handleCount(value) {
+      this.setState((prevState) => ({count: prevState.count+value}));
+  }
+ 
+  render() {
+    // omitted for brevity
+  }
+   
+}
+```
+
+위의 예제를 보게 되면 Stateful 컴포넌트에는 생성자에서 state를 초기화하고 있다. 이렇게 우리가 사용할 state를 선언을 하고 다른 곳에서 `this.state`를 사용해서 사용하게 된다. 위와 같이 생성자에서 state를 초기화하는 방법도 있지만 [클래스 영역](https://github.com/tc39/proposal-class-fields)에서 보다 쉽게 호출하도록 제안된 대체 구문(syntax)가 있다. babel을 사용해서 위의 소스를 트랜스파일을 하게 되면 아래와 같은 형태가 나온다.
+
+```jsx
+class App extends Component {
+  state = { count: 1 };
+   
+  handleCount(value) {
+      this.setState((prevState) => ({count: prevState.count+value}));
+  }
+ 
+  render() {
+    // omitted for brevity
+  }
+}
+```
+
+생성자를 선언하지않고 state object를 만들고 초기화를 할 수 있다. 
 
 이제 `render()`를 포함한 클래스 메서드 안에 들어 있는 state에 접근 가능합니다. 현재 count 값을 보여주려고 `render()` 안에 클래스 메서드를 사용하려 한다면 다음과 같이 중괄호 안에 state를 위치시켜야 합니다.
 
@@ -30,8 +77,19 @@ prevState는 이전 state를 레퍼런스하며 최신 상태로 값을 유지�
 
 `setState()`는 컴포넌트를 다시 렌더링하며, stateful component가 동작하게 됩니다.
 
-### **Stateless 컴포넌트**
+## **Stateless 컴포넌트**
 
-stateless 컴포넌트를 만드는 데 함수형이나 클래스를 사용하면 됩니다. 그러나 컴포넌트에서 라이프사이클을 적용해야만 stateless 함수형 컴포넌트의 가치를 갖게 됩니다. 여기에서 stateless 함수형 컴포넌트를 사용하고자 결정한다면 이득이 많이 있습니다. 작성하고 이해하며 테스트하기가 용이합니다. 그리고 `this` 키워드를 모두 적지 않아도 됩니다. 그렇지만 React v16이 나온 현재로서는 클래스 컴포넌트를 사용하는 것보다 stateless 함수형 컴포넌트를 사용하는 게 성능상 이득이 있지는 않습니다.
+> 동작이 state와 관련이 없는 경우 stateless 컴포넌트가 될 수 있다. function이나 class를 사용해서 stateless 컴포넌트를 만들 수 있다. 컴포넌트에서 라이프 사이클 훅을 사용해야 하는 경우가 아니라면 function 컴포넌트를 사용하는게 좋다. function 컴포넌트를 사용하면 여러 이점이 있는데, 쓰기, 이해 및 테스트하기가 쉽고 더 빠르며, this 키워드를 피할 수 있다.
 
-안좋은 점은 여러분이 라이프사이클을 활용하지 못한다는 것입니다. 라이프사이클 메서드인 `ShouldComponentUpdate()`는 종종 성능을 최적화하고 렌더링 시킬 것을 수동으로 제어하는 데 쓰입니다. 아직까지는 함수형 컴포넌트에서 그 메서드를 적용하지 못합니다. 참조자(refs)도 지원되지 않습니다.
+stateless 컴포넌트를 만드는 데 함수형이나 클래스 컴포넌트를 사용하면 된다. 위에 간단히 언급되었듯이 단순하게 생성자를 사용하거나 state object를 초기화하지 않고 props로 넘겨받은 데이터를 단순히 보여주는 것으로만 사용하다면 Stateless한 컴포넌트인 것이다. 
+
+함수형 컴포넌트를 사용하게 되면 `this` 키워드를 모두 적지 않아도 된다. 또한 함수형을 사용하게 되면 라이프사이클을 사용하지 못한다고 생각할 수 있지만, React Hook을 이용하면 사용가능하다.
+
+### TODO
+
+1. 이제는 지원이 되는 Hook으로 링크 추가하기
+
+#### Reference 
+
+- [Stateful and Stateless Components in React](https://programmingwithmosh.com/javascript/stateful-stateless-components-react/)
+- [React에서 Stateful 대 Stateless 함수형 컴포넌트](https://code.tutsplus.com/ko/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541)
