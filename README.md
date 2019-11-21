@@ -28,13 +28,7 @@ React 한 주에 한 개씩 정리하기
 - [High Order Component(고차 컴포넌트)](/Posts/High-Order-Componrnt.md)
 - [React란?](/Posts/React.md)
 - [Memo](/Posts/Memo.md)
-
-#### :calendar: 2019.10.14
-
 - [VirtualDOM](/Posts/VirtualDOM.md)
-
-#### :calendar: 2019.10.21
-
 - [JSX](/Posts/JSX.md)
 
 #### :calendar: 2019.11.06
@@ -42,6 +36,10 @@ React 한 주에 한 개씩 정리하기
 - [State VS Props](/Posts/StateVSProps.md)
 
 #### :calendar: 2019.11.3주차
+
+- [Stateful VS Stateless](/Posts/Stateful-Stateless.md)
+
+#### :calendar: 2019.11.4주차
 
 - **To Be Continue...** :smiley:
 
