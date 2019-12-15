@@ -30,16 +30,18 @@ React 한 주에 한 개씩 정리하기
 - [Memo](/Posts/Memo.md)
 - [VirtualDOM](/Posts/VirtualDOM.md)
 - [JSX](/Posts/JSX.md)
-
-#### :calendar: 2019.11.06
-
 - [State VS Props](/Posts/StateVSProps.md)
-
-#### :calendar: 2019.11.3주차
-
 - [Stateful VS Stateless](/Posts/Stateful-Stateless.md)
 
-#### :calendar: 2019.11.4주차
+#### :calendar: 2019.12.1주차
+
+- [setState](/Posts/setState.md)
+
+#### :calendar: 2019.12.2주차
+
+- [Ref](/Posts/Ref.md)
+  
+#### :calendar: 2019.12.4주차
 
 - **To Be Continue...** :smiley:
 
